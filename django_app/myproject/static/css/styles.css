@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #145116;
+}
+
+a {
+    color: #008CBA;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    margin-bottom: 20px;
+}
+/* static/css/styles.css */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.project {
+    border: 1px solid #b11818;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 500px;
+    height: auto;
+    border: 2px solid #ccc; /* Optional for visibility */
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}

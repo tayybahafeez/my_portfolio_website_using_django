@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Projects</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>My Projects</h1>
+    <ul class="projects-list">
+        {% for project in projects %}
+            <li class="project-item">
+                <h2>{{ project.title }}</h2>
+                {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                {% else %}
+                    <p>No image available</p>
+                {% endif %}
+                <p>{{ project.description }}</p>
+                {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank">View Project</a>
+                {% endif %}
+                {% if project.github_link %}
+                    <br><a href="{{ project.github_link }}" target="_blank">View on GitHub</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
